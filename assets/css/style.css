@@ -33,18 +33,20 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-nav li #home {
+li #home {
   color: yellow;
   text-decoration: underline;
 }
 
 header {
+  width: 100%;
   display: flex;
   height: 40px;
   justify-content: space-around;
   align-items: center;
   background: #353a40;
-  /* padding: 0 50px; */
+  position: fixed;
+  z-index: 1;
 }
 
 .logo-text {
@@ -60,21 +62,12 @@ nav ul {
   align-items: center;
   gap: 30px;
 }
-/* 
-.menu-icon {
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 30px;
-  z-index: 1;
-  display: none;
-} */
 
 /* Hero Section */
 .home {
   width: 100%;
   height: 70vh;
-  background: url(/assets/images/hero-img.jpg) no-repeat center/cover;
+  background: url('/assets/images/hero-img.jpg') no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +185,6 @@ nav ul {
   flex-direction: column;
   align-items: center;
   box-shadow: -1px 3px 10px -1px rgba(0, 0, 0, 0.75);
-  /* padding-bottom: 30px; */
 }
 
 .portfolio-wrapper .img-holder img {
@@ -235,7 +227,6 @@ nav ul {
 .about-container .img-holder {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   text-align: center;
 }
 
@@ -243,7 +234,6 @@ nav ul {
   width: 300px;
   height: 300px;
   border-radius: 100%;
-  /* padding: 10px 20px; */
 }
 
 /* Footer */
@@ -253,7 +243,7 @@ footer {
 }
 
 /* Media query */
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .portfolio-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -273,7 +263,7 @@ footer {
 
 /* Media query @980 */
 
-@media only screen and (max-width: 980px) {
+@media (max-width: 980px) {
   .about {
     padding: 50px 5px;
   }
@@ -341,29 +331,6 @@ footer {
     transform: translateX(-20px);
   }
 
-  /* .menu-icon {
-    display: block;
-  }
-
-  .nav-links ul {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #f2f2f2;
-    width: 50%;
-    height: 100%;
-    border-right: #ccc 1px solid;
-    opacity: 0.9;
-    padding: 30px;
-    transform: translateX(-500px);
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .nav-links .show {
-    transform: translateX(-20px);
-  } */
-
   .portfolio-wrapper {
     grid-template-columns: 1fr;
     padding: 0;
@@ -371,5 +338,17 @@ footer {
 
   .about-container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Media query @450px */
+
+@media (max-width: 400px) {
+  .menu-btn {
+    padding-right: 20px;
+  }
+
+  .box {
+    width: 320px;
   }
 }
