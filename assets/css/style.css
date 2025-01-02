@@ -400,6 +400,10 @@ footer {
     width: 100%;
   }
 
+  .service-container {
+    grid-template-columns: 1fr;
+  }
+
   .portfolio-wrapper {
     grid-template-columns: 1fr;
     padding: 0;
